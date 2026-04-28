@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ares Anime – Watch</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="watch">
+
+  <!-- GLOBAL BACKGROUND -->
+  <div id="global-bg"></div>
+
+  <div class="page-wrapper">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-line1">Ares</span>
+        <span class="brand-line2">Anime</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="browse.html" class="nav-link">Browse</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="watch-main">
+
+      <!-- TITLE -->
+      <section class="watch-meta">
+        <h1 id="watch-title" class="watch-title">Loading…</h1>
+        <p id="watch-subtitle" class="watch-subtitle"></p>
+      </section>
+
+      <!-- SERVERS -->
+      <section class="server-section">
+        <h2 class="section-title">Select Server</h2>
+        <div id="server-list" class="server-buttons">
+          <!-- Server buttons inserted by script.js -->
+        </div>
+      </section>
+
+      <!-- VIDEO PLAYER -->
+      <section class="player-section">
+        <div class="player-frame">
+          <iframe
+            id="video-player"
+            src=""
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
+
+      <!-- NEXT / PREVIOUS -->
+      <section class="np-section">
+        <button id="prev-ep" class="btn-primary small-btn">Previous</button>
+        <button id="next-ep" class="btn-primary small-btn">Next</button>
+      </section>
+
+      <!-- DOWNLOAD BUTTON -->
+      <section class="download-entry">
+        <a id="download-btn" class="btn-primary download-btn">
+          Download Episode
+        </a>
+      </section>
+
+      <!-- DISCLAIMER -->
+      <section class="disclaimer-section">
+        <h2 class="disclaimer-title">Disclaimer</h2>
+        <p class="disclaimer-text">
+          Videos are hosted on third-party servers.  
+          Ares Anime does not store any files.
+        </p>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>© 2025 Ares Anime</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+          </html>

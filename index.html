@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ares Anime</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="home">
+
+<!-- 🌌 Galaxy Background -->
+<div id="global-bg"></div>
+
+<!-- 🌠 STARFIELD CANVAS -->
+<canvas id="starfield"></canvas>
+
+<div class="page-wrapper">
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+      <div class="brand">
+        <span class="brand-line1">Ares</span>
+        <span class="brand-line2">Anime</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link nav-link-active">Home</a>
+        <a href="browse.html" class="nav-link">Browse</a>
+      </nav>
+  </header>
+
+  <!-- ⭐ HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <div class="hero-media">
+        <img id="hero-poster" src="" alt="">
+      </div>
+
+      <div class="hero-content">
+        <span id="hero-pill" class="hero-pill">Hindi Dub • Updated</span>
+
+        <h1 id="hero-title" class="hero-title"></h1>
+
+        <p id="hero-meta" class="hero-meta"></p>
+
+        <button id="hero-watch-btn" class="btn-primary hero-btn">
+          Watch Now
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <h2 class="section-title">Latest</h2>
+  <div class="anime-row" id="latest-row"></div>
+
+  <h2 class="section-title">Popular</h2>
+  <div class="anime-row" id="popular-row"></div>
+
+  <h2 class="section-title">Trending</h2>
+  <div class="anime-row" id="trending-row"></div>
+
+  <!-- ⭐ YOUR DISCLAIMER (BACK AGAIN 💖) -->
+  <section class="disclaimer-section" style="padding:20px;margin-top:40px;">
+    <h2 class="disclaimer-title" style="font-size:20px;margin-bottom:8px;">Disclaimer</h2>
+    <p class="disclaimer-text" style="opacity:0.85;line-height:1.5;">
+      Ares Anime does not store or host any media files on its own server.<br>
+      We only index links from internet which are hosted on third party services.<br>
+      We index links like Google.<b>
+      
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>© 2025 Ares Anime</p>
+  </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+<!-- ⭐ STARFIELD SCRIPT -->
+<script>
+const canvas = document.getElementById("starfield");
+const ctx = canvas.getContext("2d");
+let stars = [], w, h;
+
+function resizeStarfield() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+
+  stars = [];
+  for (let i = 0; i < 150; i++) {
+    stars.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      z: Math.random() * 0.7 + 0.3,
+      size: Math.random() * 1.1 + 0.3,
+      speed: Math.random() * 0.4 + 0.1
+    });
+  }
+}
+
+function drawStarfield() {
+  ctx.clearRect(0, 0, w, h);
+
+  for (let s of stars) {
+    ctx.fillStyle = `rgba(255,255,255,${s.z})`;
+    ctx.beginPath();
+    ctx.arc(s.x, s.y, s.size, 0, Math.PI * 2);
+    ctx.fill();
+
+    s.y += s.speed;
+    if (s.y > h) s.y = 0;
+  }
+
+  requestAnimationFrame(drawStarfield);
+}
+
+window.addEventListener("resize", resizeStarfield);
+
+resizeStarfield();
+drawStarfield();
+</script>
+
+</body>
+</html>

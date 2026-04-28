@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ares Anime – Browse</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="browse">
+
+    <!-- GLOBAL BACKGROUND -->
+    <div id="global-bg"></div>
+
+    <div class="page-wrapper">
+
+        <!-- HEADER -->
+        <header class="site-header">
+            <div class="brand">
+                <span class="brand-line1">Ares</span>
+                <span class="brand-line2">Anime</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="browse.html" class="nav-link nav-link-active">Browse</a>
+            </nav>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main class="browse-main">
+
+            <!-- SEARCH BAR -->
+            <section class="browse-search-section">
+                <div class="browse-search-box">
+                    <input
+                        id="browse-search-input"
+                        type="text"
+                        class="browse-search-input"
+                        placeholder="Search anime..."
+                        autocomplete="off"
+                    />
+                </div>
+            </section>
+
+            <!-- ANIME GRID -->
+            <section class="browse-grid-section">
+                <h2 class="section-title">All Anime</h2>
+
+                <div id="browse-list" class="browse-grid">
+                    <!-- Cards from script.js -->
+                </div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <p>© 2025 Ares Anime</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

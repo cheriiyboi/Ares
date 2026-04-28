@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ares Anime – Episodes</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="episodes">
+
+    <!-- GLOBAL BACKGROUND -->
+    <div id="global-bg"></div>
+
+    <!-- MAIN WRAPPER -->
+    <div class="page-wrapper">
+
+        <!-- NAVBAR -->
+        <header class="site-header">
+            <div class="brand">
+                <span class="brand-line1">Ares</span>
+                <span class="brand-line2">Anime</span>
+            </div>
+
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="browse.html" class="nav-link">Browse</a>
+            </nav>
+        </header>
+
+        <!-- CONTENT -->
+        <main class="episodes-main">
+
+            <!-- ANIME HEADER -->
+            <section id="anime-header" class="anime-header">
+                <div class="anime-header-inner">
+
+                    <!-- Poster -->
+                    <div class="anime-poster-box">
+                        <img id="anime-poster" class="anime-poster" src="" alt="Poster" />
+                    </div>
+
+                    <!-- Info -->
+                    <div class="anime-info">
+                        <span id="anime-badge" class="anime-badge"></span>
+                        <h1 id="anime-title" class="anime-title">Loading...</h1>
+                        <p id="anime-description" class="anime-description"></p>
+
+                        <label class="season-label">Season:</label>
+                        <select id="season-select" class="season-select"></select>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- EPISODE LIST -->
+            <section class="episodes-section">
+                <h2 class="section-title">Episodes</h2>
+                <div id="episodes-list" class="episodes-list"></div>
+            </section>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="site-footer">
+            <p>© 2025 Ares Anime</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+  </html>
